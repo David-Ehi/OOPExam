@@ -20,6 +20,8 @@ namespace OOPExam
 
         public double CurrentPowerKWH { get; set; }
 
+        public string TypeofRobot { get; set; }
+
         //constructors
         public Robot()
         {
@@ -47,7 +49,7 @@ namespace OOPExam
         //toString override
         public override string ToString()
         {
-            return $"{Name} - ";
+            return $"{Name} - [{TypeofRobot}]";
         }
     } //end of class
 

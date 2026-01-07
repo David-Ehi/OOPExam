@@ -35,19 +35,28 @@ namespace OOPExam
 
         public List<Robot> CreateRobots()
         {
-            HouseHoldRobot r1 = new HouseHoldRobot() { Name = "HouseBot", };
-            HouseHoldRobot r2 = new HouseHoldRobot() { Name = "GardenMate" };
+
+            List<Robot> AllRobot = new List<Robot>();
+            HouseHoldRobot r1 = new HouseHoldRobot() { Name = "HouseBot", TypeofRobot="HouseHold"};
+            HouseHoldRobot r2 = new HouseHoldRobot() { Name = "GardenMate", TypeofRobot = "HouseHold" };
             //r2.DownloadSkill(Gardening);
-            HouseHoldRobot r3 = new HouseHoldRobot() { Name = "Housemate 3000" };
+            HouseHoldRobot r3 = new HouseHoldRobot() { Name = "Housemate 3000", TypeofRobot = "HouseHold" };
             //r3.DownloadSkill(Laundry);
 
 
-            DeliveryRobot r4 = new DeliveryRobot() { Name = "DeliverBot" };
-            DeliveryRobot r5 = new DeliveryRobot() { Name = "FlyBot" };
-            DeliveryRobot r6 = new DeliveryRobot() { Name = "Driver" };
+            DeliveryRobot r4 = new DeliveryRobot() { Name = "DeliverBot", TypeofRobot = "Delivery" };
+            DeliveryRobot r5 = new DeliveryRobot() { Name = "FlyBot", TypeofRobot = "Delivery" };
+            DeliveryRobot r6 = new DeliveryRobot() { Name = "Driver", TypeofRobot = "Delivery" };
+            AllRobot.Add(r1);
+            AllRobot.Add(r2);
+            AllRobot.Add(r3);
+            AllRobot.Add(r4);
+            AllRobot.Add(r5);
+            AllRobot.Add(r6);
 
 
-            return new List<Robot>();
+
+            return AllRobot;
         }
     }
 }
