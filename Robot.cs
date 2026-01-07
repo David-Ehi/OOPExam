@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace OOPExam
 {
+    //enums
     public enum HouseholdSkill { Cooking, Cleaning, Laundry, Gardening, ChildCare }
     public enum DeliveryMode { Walking, Driving, Flying }
 
@@ -34,7 +35,7 @@ namespace OOPExam
 
         public double GetBatteyPercentage()
         {
-            return (CurrentPowerKWH / PowerCapacityKWH) *100;
+            return (CurrentPowerKWH / PowerCapacityKWH) *100; // finds percentage
         }
 
         public string DisplayBatteryInformation()
@@ -74,7 +75,7 @@ namespace OOPExam
         {
            //Skills.Add(hhskill);
         }
-    }
+    } // end of class
 
     public class DeliveryRobot : Robot
     {
@@ -92,6 +93,6 @@ namespace OOPExam
 
 
 
-    }
+    }//end of class
 
 }

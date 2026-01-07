@@ -28,11 +28,12 @@ namespace OOPExam
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            //creates the objects when loaded and adds to listbox
             robots = CreateRobots();
             lbxRobotList.ItemsSource = robots;
             
         }
-
+        //creates robot objects
         public List<Robot> CreateRobots()
         {
 
