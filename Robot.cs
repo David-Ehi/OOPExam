@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,6 +21,12 @@ namespace OOPExam
         public double CurrentPowerKWH { get; set; }
 
         //constructors
+        public Robot()
+        {
+            Name = "";
+            PowerCapacityKWH = 0;
+            CurrentPowerKWH = 0;
+        }
 
         //methods
 
@@ -49,13 +56,22 @@ namespace OOPExam
         //properties
 
         private List<HouseholdSkill> Skills;
+
+        
+        //constuctors
+        public HouseHoldRobot()
+        {
+        }
         
         //methods
         public override string DescribeRobot()
         {
             return $"I am a Household Robot.\nI can help with chores around the house.\n\nHousehold Robot Skills {Skills}\n{DisplayBatteryInformation()}";
         }
-
+        public void DownloadSkill(Enum hhskill)
+        {
+           //Skills.Add(hhskill);
+        }
     }
 
     public class DeliveryRobot : Robot
@@ -71,6 +87,8 @@ namespace OOPExam
         {
             return $"I am a Delivery Robot.\n\nI specialise in Delivery by{ModeOfDelivery}\nThe Maximum load i can carry is {MaxLoadKG}KG{DisplayBatteryInformation()}";
         }
+
+
 
     }
 
