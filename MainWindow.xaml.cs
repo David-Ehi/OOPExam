@@ -58,8 +58,20 @@ namespace OOPExam
 
             return AllRobot;
         }
+
+        private void lbxRobotList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //determine what robot is clicked
+            Robot selectedRobot = lbxRobotList.SelectedItem as Robot;
+
+            if (selectedRobot != null)
+            {
+                lbxRobotList = null; // clear list box
+                lbxRobotList.ItemsSource = selectedRobot.DescribeRobot(); // describe the robot
+            }
+        }
     }
 }
 
 
-//i couldnt get anything to commit. I dont know why but here is the link to the repo anyways: https://github.com/David-Ehi/OOPExam
+//i had some touble with commits. Here is the link to the repo anyways: https://github.com/David-Ehi/OOPExam
